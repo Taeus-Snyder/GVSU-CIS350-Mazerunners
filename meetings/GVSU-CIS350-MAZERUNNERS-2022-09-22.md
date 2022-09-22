@@ -2,7 +2,7 @@
 
 Team name: Mazerunners
 
-Members present:
+Members present: Matthais Snyder, Autumn Bertram, Ryan Mansour
 
 Date: 9/22/2022
 
