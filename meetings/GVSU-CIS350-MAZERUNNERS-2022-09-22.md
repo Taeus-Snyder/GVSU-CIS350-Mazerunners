@@ -1,4 +1,4 @@
-## Meeting minutes template
+## Meeting minutes 9-22-2022
 
 Team name: Mazerunners
 
