@@ -1,6 +1,7 @@
 # Mazerunners
 
-Procedural Maze Game...more stuff here (~1 paragraph)
+We plan to create a top-down 2D procedurally generated maze for our player to navigate and accomplish specific set tasks. Beginning with simple and straightforward tasks, such as collecting objects/getting to a certain point. After each completion of a task, the level is finished and the player will automatically be pushed into the next level with an increasingly more difficult task. As the player progresses, the maze will become more challenging in a variety of ways. 
+
 
 ## Team Members and Roles
 
