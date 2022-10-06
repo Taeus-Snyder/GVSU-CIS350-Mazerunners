@@ -29,7 +29,7 @@ Weekly meetings, see where everyone is at, ensuring everything is on time and cu
 - Maze Generation Demo **(ETA: 3 weeks Thursday, October 27)**
 - Functioning Player Demo **(ETA: 4 weeks Thursday, November 3)**
 - Enemy vs Player Demo **(ETA: 5 weeks Thursday, November 10)**
-- Additional features; hazards enemies; extras 
+- Additional features; hazards; extras **(ETA: 5 weeks Thursday, November 10)**
 - In depth testing and debugging **(ETA: 6 weeks Thursday, November 17)**
 - GAME RELEASE: set up on hosting platform and playable **(ETA: 7 weeks Thursday, November 24)** 🎉
 - Final debugging and user testing **(ETA: 8 weeks Thursday, December 1)**
