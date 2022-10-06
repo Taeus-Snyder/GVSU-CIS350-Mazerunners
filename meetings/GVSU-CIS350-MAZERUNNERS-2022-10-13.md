@@ -15,7 +15,7 @@ Discussion points:
 * Name that game!
 * 
 
-Goals for next week (include responsibilities)
-* 
-* 
-* 
+Goals for next week (include responsibilities):
+* .
+* .
+* .
