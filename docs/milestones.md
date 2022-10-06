@@ -1,5 +1,5 @@
 # Milestones
-- [ ] 1. **Timeline created and reviewed**
+- [x] 1. **Timeline created and reviewed**
 - [ ] 2. **Classes skeleton diagram**
 - [ ] 3. **Use cases diagrams**
     -    3.1 Movement
