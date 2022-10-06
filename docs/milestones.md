@@ -16,18 +16,18 @@
    -  8.1 Enemy character able to move/attack on its own
    -  8.2 Moving back and forth within its range
    -  8.3 Attacks player character when PC enters EC’s range
-- [ ] 9. **Menu diagram**
-- [ ] 10. **MENU DEMO**
+- [ ] 9. **Menu and displays diagram**
+- [ ] 10. **MENU AND DISPLAYS DEMO**
     - 10.1 Staring menu (start game, choose a level, help, quit)
     - 10.2 In-game menu (resume, exit, options)
+    - 10.3 In-game displays (health bar, map, objectives?)
 - [ ] 11. **Menu final**
     - 11.1 Polished look
     - 11.2 Fully integrated into the game
-- [ ] 12. **Map feature**
-- [ ] 13. **RELEASE COMPLETE GAME**
-     - 13.1 Maze mechanic
-     - 13.2 Player mechanics
-     - 13.3 Menu and displays
-     - 13.4 Functioning enemy character
-     - 13.5 Playable on GitHub pages
+- [ ] 12. **RELEASE COMPLETE GAME**
+     - 12.1 Maze mechanic
+     - 12.2 Player mechanics
+     - 12.3 Menu and displays
+     - 12.4 Functioning enemy character
+     - 12.5 Playable on GitHub pages
 ### More to be added...
