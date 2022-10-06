@@ -16,6 +16,6 @@ Discussion points:
 * 
 
 Goals for next week (include responsibilities)
-*
-*
-*
+* 
+* 
+* 
