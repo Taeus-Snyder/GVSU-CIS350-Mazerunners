@@ -23,20 +23,20 @@ Weekly meetings, see where everyone is at, ensuring everything is on time and cu
 # Estimated Timeline
 **# of weeks remaining until Game Release: 7 (as of 10/6/22)**
 - Define characteristics of the game (week 1)
-- Diagrams of menu, maze, and class hierarchy **(ETA: 1 week Thursday, October 14)
-- Menu Demo **(ETA: 1 week Thursday, October 13)
-- In-class Status Update and Demonstration **(ETA: 1 week Friday October 14) 🎉
-- Maze Generation Demo **(ETA: 3 weeks Thursday, October 27)
-- Functioning Player Demo **(ETA: 4 weeks Thursday, November 3)
-- Enemy vs Player Demo **(ETA: 5 weeks Thursday, November 10)
+- Diagrams of menu, maze, and class hierarchy **(ETA: 1 week Thursday, October 14)**
+- Menu Demo **(ETA: 1 week Thursday, October 13)**
+- In-class Status Update and Demonstration **(ETA: 1 week Friday October 14)** 🎉
+- Maze Generation Demo **(ETA: 3 weeks Thursday, October 27)**
+- Functioning Player Demo **(ETA: 4 weeks Thursday, November 3)**
+- Enemy vs Player Demo **(ETA: 5 weeks Thursday, November 10)**
 - Additional features; hazards enemies; extras 
-- In depth testing and debugging **(ETA: 6 weeks Thursday, November 17)
-- Game release: set up on hosting platform and playable **(ETA: 7 weeks Thursday, November 24) 🎉
-- Final debugging and user testing **(ETA: 8 weeks Thursday, December 1)
-- Preparations for game presentation **(ETA: 8.5 weeks Tuesday, December 6)
+- In depth testing and debugging **(ETA: 6 weeks Thursday, November 17)**
+- Game release: set up on hosting platform and playable **(ETA: 7 weeks Thursday, November 24)** 🎉
+- Final debugging and user testing **(ETA: 8 weeks Thursday, December 1)**
+- Preparations for game presentation **(ETA: 8.5 weeks Tuesday, December 6)**
   - Slides/ppt?
   - Predetermined format for demonstrating game mechanics
-- Presenting game to class **(ETA: 9 weeks Wednesday, December 7) 🎉
+- Presenting game to class **(ETA: 9 weeks Wednesday, December 7)** 🎉
 
 # Anticipated Problems
 
