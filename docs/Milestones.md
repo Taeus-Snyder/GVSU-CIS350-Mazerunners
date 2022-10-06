@@ -1,0 +1,33 @@
+# Milestones
+- [ ] 1. **Timeline created**
+- [ ] 2. **Classes skeleton diagram**
+- [ ] 3. **Use cases diagrams**
+    -    3.1 Movement
+    -    3.2 Attack
+    -    3.3 Lose health
+- [ ] 4. **1st generated maze**
+- [ ] 5. **Navigateable maze**
+- [ ] 6. **Moveable player character**
+- [ ] 7. **BASIC MAZE DEMO**
+   -  7.1 The player character is able to navigate the maze with the pressing of certain keys, one press of a key is equal to one square movement
+   -  7.2 The player character is unable to move through maze walls
+   -  7.3 The player character is able to navigate from the beginning of the maze to the end of the maze
+- [ ] 8. **Generate enemy character in the maze**
+   -  8.1 Enemy character able to move/attack on its own
+   -  8.2 Moving back and forth within its range
+   -  8.3 Attacks player character when PC enters EC’s range
+- [ ] 9. **Menu diagram**
+- [ ] 10. **MENU DEMO**
+    - 10.1 Staring menu (start game, choose a level, help, quit)
+    - 10.2 In-game menu (resume, exit, options)
+- [ ] 11. **Menu final**
+    - 11.1 Polished look
+    - 11.2 Fully integrated into the game
+- [ ] 12. **Map feature**
+- [ ] 13. **RELEASE COMPLETE GAME**
+     - 13.1 Maze mechanic
+     - 13.2 Player mechanics
+     - 13.3 Menu and displays
+     - 13.4 Functioning enemy character
+     - 13.5 Playable on GitHub pages
+### More to be added...
