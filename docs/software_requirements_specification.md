@@ -1,6 +1,5 @@
 # Overview
-<Describe the purpose of this document in 1 paragraph of less … hint: it is
-your SRS>
+This contains our software requirements specifications. The purpose of which is to define the scope of the project and identify the characteristics of the system.
 # Fuctional Requirements
   1. Player Mechanics
       1. Player shall move via keyboard inputs
