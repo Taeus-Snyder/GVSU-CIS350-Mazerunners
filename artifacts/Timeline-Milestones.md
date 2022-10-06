@@ -1,9 +1,9 @@
 - [ ] 1. **Timeline created**
 - [ ] 2. **Classes skeleton diagram**
 - [ ] 3. **Use cases diagrams**
-         1. Movement
-         2. Attack
-         3. Lose health
+    -    3.1 Movement
+    -    3.2 Attack
+    -    3.3 Lose health
 - [ ] 4. **1st generated maze**
 - [ ] 5. **Navigateable maze**
 - [ ] 6. **Moveable player character**
