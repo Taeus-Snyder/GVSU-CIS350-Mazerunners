@@ -31,7 +31,7 @@ Weekly meetings, see where everyone is at, ensuring everything is on time and cu
 - Enemy vs Player Demo **(ETA: 5 weeks Thursday, November 10)**
 - Additional features; hazards enemies; extras 
 - In depth testing and debugging **(ETA: 6 weeks Thursday, November 17)**
-- Game release: set up on hosting platform and playable **(ETA: 7 weeks Thursday, November 24)** 🎉
+- GAME RELEASE: set up on hosting platform and playable **(ETA: 7 weeks Thursday, November 24)** 🎉
 - Final debugging and user testing **(ETA: 8 weeks Thursday, December 1)**
 - Preparations for game presentation **(ETA: 8.5 weeks Tuesday, December 6)**
   - Slides/ppt?
