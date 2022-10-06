@@ -1,4 +1,4 @@
-- [ ] 1. #### Timeline created
+1. #### Timeline created
 2. #### Classes skeleton diagram
 3. #### Use cases diagrams
    -  3.1 Movement
