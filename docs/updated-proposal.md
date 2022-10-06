@@ -27,6 +27,7 @@ Weekly meetings, see where everyone is at, ensuring everything is on time and cu
 - Menu Demo **(ETA: 1 week Thursday, October 13)**
 - In-class Status Update and Demonstration **(ETA: 1 week Friday October 14)** 🎉
 - Maze Generation Demo **(ETA: 3 weeks Thursday, October 27)**
+- In-game Displays Demo **(ETA: 3 weeks Thursday, October 27)**
 - Functioning Player Demo **(ETA: 4 weeks Thursday, November 3)**
 - Enemy vs Player Demo **(ETA: 5 weeks Thursday, November 10)**
 - Additional features; hazards; extras **(ETA: 5 weeks Thursday, November 10)**
