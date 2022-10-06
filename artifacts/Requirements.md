@@ -2,12 +2,12 @@
 <Describe the purpose of this document in 1 paragraph of less … hint: it is
 your SRS>
 # Fuctional Requirements
-  1.Player Mechanics
-  1. Player shall move via keyboard inputs
-  2. Player shall have a dynamic health
-  3. Player shall be able to interact with map contents
-  4. Player shall be in view at all times
-  5. Player shall have a use of attack
+  1. Player Mechanics
+      1. Player shall move via keyboard inputs
+      2. Player shall have a dynamic health
+      3. Player shall be able to interact with map contents
+      4. Player shall be in view at all times
+      5. Player shall have a use of attack
 
 # Non - functional Requirements
 ### Player Mechanics
