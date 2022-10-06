@@ -15,7 +15,7 @@
    -  8.1 Enemy character able to move/attack on its own
    -  8.2 Moving back and forth within its range
    -  8.3 Attacks player character when PC enters EC’s range
-- [ ] . **Menu diagram**
+- [ ] 9. **Menu diagram**
 - [ ] 10. **MENU DEMO**
     - 10.1 Staring menu (start game, choose a level, help, quit)
     - 10.2 In-game menu (resume, exit, options)
