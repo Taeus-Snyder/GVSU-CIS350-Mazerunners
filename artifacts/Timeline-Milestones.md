@@ -1,3 +1,4 @@
+# Milestones
 - [ ] 1. **Timeline created**
 - [ ] 2. **Classes skeleton diagram**
 - [ ] 3. **Use cases diagrams**
