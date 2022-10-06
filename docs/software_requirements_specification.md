@@ -8,17 +8,17 @@ This contains our software requirements specifications. The purpose of which is 
       4. Player shall be in view at all times
       5. Player shall have a use of attack
    2. Menus and Displays
-      1. ...
-      2. ...
-      3. ...
-      4. ...
-      5. ...
+      1. Menu shall have selectable options via mouse and keyboard
+      2. Menu shall have level selection
+      3. Menu shall have difficulty selection
+      4. Menu shall have start and exit options
+      5. Menu shall show in game objectives
    3. Enemies
       1. The enemy character shall attack the player character when the player character is within a certain range.
       2. The enemy character shall have health points.
       3. The enemy character shall be destroyed once its health points quantity reaches 0.
       4. The enemy character shall remove health points from the player character when it attacks.
-      5. The enermy character shall move within a predetermined range.
+      5. The enemy character shall move within a predetermined range.
 
 # Non - functional Requirements
   1. Player Mechanics
@@ -29,11 +29,11 @@ This contains our software requirements specifications. The purpose of which is 
       5. Player shall have dynamic skills gained throughout the game
       6. Player shall stand out from the rest of the game
    2. Menus and Displays
-      1. ...
-      2. ...
-      3. ...
-      4. ...
-      5. ...
+      1. Menu shall respond in ~5 seconds
+      2. Menu shall be easy to navigate
+      3. Menu shall indicate currently selected option
+      4. Menu shall transition to different options smoothly
+      5. Menu shall be easy to read (text, color scheme)
    3. Enemies
       1. An enemy character shall not be able to move through walls or other solid characters.
       2. The enemy character shall be limited to a certain area of movement within the map.
