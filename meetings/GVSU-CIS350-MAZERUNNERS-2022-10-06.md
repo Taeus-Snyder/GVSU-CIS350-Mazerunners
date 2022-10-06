@@ -20,5 +20,6 @@ Goals for next week (include responsibilities)
 * Use case diagrams: everyone
 * Rough menu + SRS layout: Autumn
 * UML of classes: Ryan
-* Sketches of in-game layout: Mathias 
+* Sketches of in-game layout: Matthias 
+* Add project to project tab: Matthias
 
