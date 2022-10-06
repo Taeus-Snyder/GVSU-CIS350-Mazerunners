@@ -24,4 +24,10 @@
     - 11.1 Polished look
     - 11.2 Fully integrated into the game
 - [ ] 12. **Map feature**
-13. #### More to be added...
+- [ ] 13. **RELEASE COMPLETE GAME**
+     - 13.1 Maze mechanic
+     - 13.2 Player mechanics
+     - 13.3 Menu and displays
+     - 13.4 Functioning enemy character
+     - 13.5 Playable on GitHub pages
+### More to be added...
