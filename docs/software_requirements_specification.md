@@ -14,7 +14,7 @@ This contains our software requirements specifications. The purpose of which is 
       4. Menu shall have start and exit options
       5. Menu shall show in game objectives
    3. Enemies
-      1. The enemy character shall attack the player character when the player character is within a certain range.
+      1. The enemy character shall attack the player character when the player character is within the enemy character's range of movement.
       2. The enemy character shall have health points.
       3. The enemy character shall be destroyed once its health points quantity reaches 0.
       4. The enemy character shall remove health points from the player character when it attacks.
