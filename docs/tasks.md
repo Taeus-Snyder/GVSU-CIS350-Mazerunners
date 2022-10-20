@@ -35,12 +35,12 @@
 ### To Be Completed
 
 1. Generate maze
-    - Description:
+    - Description: Create a maze to be further augmented with features later on
     - ETA:
     - Responsible: Matthias
     
 2. Generate navigateable maze
-    - Description:
+    - Description: Ensuring maze is solvable and interacts with all current features correctly
     - ETA:
     - Responsible: Matthias
     
