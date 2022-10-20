@@ -28,7 +28,7 @@
     - Description:
     - ETA:
     - Responsible: 
-4.Task 4
+4. Task 4
     - Description:
     - ETA:
     - Responsible: 
