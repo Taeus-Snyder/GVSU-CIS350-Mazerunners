@@ -1,19 +1,42 @@
 # High-Level Tasks
 
 ### Completed
-1. Task 1
+1. Timeline creates
     - Description:
     - Time Completed:
     - Responsible: 
-2. Task 2
+2. Task #
     - Description:
     - Time Completed:
     - Responsible: 
-3. Task 3
+3. Task #
     - Description:
     - Time Completed:
     - Responsible: 
-
+2. Task #
+    - Description:
+    - Time Completed:
+    - Responsible: 
+3. Task #
+    - Description:
+    - Time Completed:
+    - Responsible: 
+2. Task #
+    - Description:
+    - Time Completed:
+    - Responsible: 
+3. Task #
+    - Description:
+    - Time Completed:
+    - Responsible: 
+2. Task #
+    - Description:
+    - Time Completed:
+    - Responsible: 
+3. Task #
+    - Description:
+    - Time Completed:
+    - Responsible: 
 Timeline created - Autumn
 
 Requirements - Autumn, Ryan, Matthias
