@@ -15,10 +15,15 @@
     - Responsible: 
 
 Timeline created, Autumn
+
 Requirements, Autumn, Ryan, Matthias
+
 Class Skeleton Diagram, Ryan
+
 Use-case diagram of Menu, Autumn
+
 Use-case diagram of Objectives, Ryan
+
 Use-case diagram of In-Game Layout, Matthias
 
 
@@ -50,14 +55,24 @@ Use-case diagram of In-Game Layout, Matthias
     - Responsible: 
 
 Generate maze
+
 Generate navigateable maze
+
 Create usable starting menu
+
 Create in-game displays
+
 Create in-game menu
+
 Generate functional player character
+
 Generate functional enemy character
+
 Integrate in-game displays and menu with maze game GUI
+
 Integrate starting menu with maze game
+
 Release game onto hosting site
+
 Final debugging/testing
 
