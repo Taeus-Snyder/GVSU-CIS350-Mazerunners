@@ -14,17 +14,17 @@
     - Time Completed:
     - Responsible: 
 
-Timeline created, Autumn
+Timeline created - Autumn
 
-Requirements, Autumn, Ryan, Matthias
+Requirements - Autumn, Ryan, Matthias
 
-Class Skeleton Diagram, Ryan
+Class Skeleton Diagram - Ryan
 
-Use-case diagram of Menu, Autumn
+Use-case diagram of Menu - Autumn
 
-Use-case diagram of Objectives, Ryan
+Use-case diagram of Objectives - Ryan
 
-Use-case diagram of In-Game Layout, Matthias
+Use-case diagram of In-Game Layout - Matthias
 
 
 ### To Be Completed
