@@ -54,25 +54,21 @@ Use-case diagram of In-Game Layout - Matthias
     - ETA:
     - Responsible: 
 
-Generate maze
+Generate maze (A) - Matthias
 
-Generate navigateable maze
+Generate navigateable maze (A) - Matthias
 
-Create usable starting menu
+Create usable starting menu (A) - Autumn
 
-Create in-game displays
+Create in-game displays (A) - Autumn
 
-Create in-game menu
+Create in-game menu (A) - Autumn
 
-Generate functional player character
+Generate functional player character (A) - Ryan
 
-Generate functional enemy character
+Generate functional enemy character (M) - Ryan
 
-Integrate in-game displays and menu with maze game GUI
+Release game onto hosting site (M) - Autumn 
 
-Integrate starting menu with maze game
-
-Release game onto hosting site
-
-Final debugging/testing
+Final debugging/testing (M) - everyone
 
