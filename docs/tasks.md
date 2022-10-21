@@ -17,18 +17,18 @@
     - Responsible: Ryan
     
 4. Use-case Diagram of Menu
-    - Description:
-    - Time Completed:
+    - Description: Create use case diagram displaying anticipated funtions of the main menu
+    - Time Completed: 10-09-22
     - Responsible: Autumn
     
 5. Use-case Diagram of Objectives
-    - Description:
-    - Time Completed:
+    - Description: Create use case diagram displaying anticipated funtions of the objectives feature
+    - Time Completed: 10-10-22
     - Responsible: Ryan
     
 6. Use-case Diagram of In-Game Layout
-    - Description:
-    - Time Completed:
+    - Description: Create use case diagram displaying anticipated user interactions within the maze game
+    - Time Completed: 10-09-22
     - Responsible: Matthias
 
 
