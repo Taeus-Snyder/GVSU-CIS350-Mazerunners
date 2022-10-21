@@ -75,25 +75,7 @@
     - Responsible: Autumn
    
 9. Final debugging/testing
-    - Description:
-    - ETA: 12 -06-22
+    - Description: Ensure game passes all test-cases and user testing
+    - ETA: 12-06-22
     - Responsible: Matthias, Ryan, Autumn
-
-Generate maze - Matthias
-
-Generate navigateable maze - Matthias
-
-Create usable starting menu - Autumn
-
-Create in-game displays (A) - Autumn
-
-Create in-game menu (A) - Autumn
-
-Generate functional player character - Ryan
-
-Generate functional enemy character - Ryan
-
-Release game onto hosting site - Autumn 
-
-Final debugging/testing - everyone
 
