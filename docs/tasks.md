@@ -36,27 +36,27 @@
 
 1. Generate maze
     - Description: Create a maze to be further augmented with features later on
-    - ETA:
+    - ETA: 10-25-22
     - Responsible: Matthias
     
 2. Generate navigateable maze
     - Description: Ensuring maze is solvable and interacts with all current features correctly
-    - ETA:
+    - ETA: 11-03-22
     - Responsible: Matthias
     
 3. Create usable starting menu
     - Description: Create starting menu with functioning start, exit, and option buttons that will take the user to the appropriate page
-    - ETA:
+    - ETA: 10-25-22
     - Responsible: Autumn
     
 4. Create in-game displays 
     - Description: Create visual diplays (health bar, objectives box, menu tab) and integrate with maze in main gameplay
-    - ETA:
+    - ETA: 11-03-22
     - Responsible: Autumn
     
 5. Create in-game menu
     - Description: Create menu accessible within gameplay with resume, exit, restart, and objectives buttons which will take the user to the appropriate page
-    - ETA:
+    - ETA: 11-03-22
     - Responsible: Autumn
     
 6. Generate functional player character
@@ -71,12 +71,12 @@
     
 8. Release game onto hosting site
     - Description: Research hosting options and upload source code to hosting site
-    - ETA:
+    - ETA: 12-01-22
     - Responsible: Autumn
    
 9. Final debugging/testing
     - Description:
-    - ETA:
+    - ETA: 12 -06-22
     - Responsible: Matthias, Ryan, Autumn
 
 Generate maze - Matthias
