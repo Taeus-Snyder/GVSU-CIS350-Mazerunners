@@ -60,13 +60,13 @@
     - Responsible: Autumn
     
 6. Generate functional player character
-    - Description:
-    - ETA:
+    - Description: Create playable character to navigate maze in addition to being capable of interacting with maze features
+    - ETA: 11-03-22
     - Responsible: Ryan
     
 7. Generate functional enemy character
-    - Description:
-    - ETA:
+    - Description: Create enemy character that resides within maze to attack/hinder player
+    - ETA: 11-03-22
     - Responsible: Ryan
     
 8. Release game onto hosting site
