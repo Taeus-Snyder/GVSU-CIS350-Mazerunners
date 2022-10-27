@@ -10,10 +10,11 @@ This is a top-down 2D game created using Java.
 
 ## Team Members and Roles
 
-* [Matthias Snyder](https://github.com/Taeus-Snyder/CIS350-HW2-Snyder#matthias-snyder) (Role 1, Role 2)
-* [Autumn Bertram](https://github.com/xxaleebxx/CIS350-HW2-BERTRAM) (Role 3, Role 4)
-* [Ryan Mansour](https://github.com/mansourr14/CIS350-HW2-Mansour) (Role 5, Role 6)
+* [Matthias Snyder](https://github.com/Taeus-Snyder/CIS350-HW2-Snyder#matthias-snyder) (Role 1, Developer)
+* [Autumn Bertram](https://github.com/xxaleebxx/CIS350-HW2-BERTRAM) (Role 3, Front-End Developer)
+* [Ryan Mansour](https://github.com/mansourr14/CIS350-HW2-Mansour) (Role 5, Developer)
 
 ## Prerequisites
+
 
 ## Run Instructions
