@@ -1,6 +1,6 @@
 # Mazerunners
 
-### Holiday Maze Dash
+## Holiday Maze Dash
 **The concept**: Christmas is almost here, and some of Santa’s presents have been scattered throughout mazes. Collect the presents to save Christmas!
 
 **Game play**: The player will play as Santa and navigate procedurally generated mazes while collecting presents. The player must complete their objectives and exit the maze to move on to the next level. 
