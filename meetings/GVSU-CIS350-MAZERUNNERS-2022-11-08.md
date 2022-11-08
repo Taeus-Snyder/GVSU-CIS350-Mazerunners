@@ -8,9 +8,12 @@ Time: 10:30am
 
 Discussion points:
 
-- 
+- check in
+- where we are: for each person
+- what needs to be done
 
 
 Goals for next week (include responsibilities):
 
-- 
+- get back on track
+- finish previous tasks
