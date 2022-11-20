@@ -32,12 +32,20 @@ public class MazeGame extends Canvas implements Runnable {
 
     private Menu menu;
 
+    private InGameMenu inGameMenu;
+
     public static enum STATE{
         MENU,
-        GAME
-    };
+        GAME,
+        OPTIONS
+    }
+
+    public static STATE getState(){
+        return state;
+    }
 
     public static STATE state = STATE.MENU;
+
 
     public void init(){
         requestFocus();
@@ -58,6 +66,7 @@ public class MazeGame extends Canvas implements Runnable {
         health = new Health(256, 64, this);
 
         menu = new Menu();
+        inGameMenu = new InGameMenu();
     }
 
 
@@ -134,16 +143,22 @@ public class MazeGame extends Canvas implements Runnable {
         Graphics g = bs.getDrawGraphics();
 
         g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
+        if (state == STATE.MENU){
+            g.setColor(Color.red);
+            g.fillRect(0, 0, WIDTH*2, HEIGHT*2);
+        }
 
 
         if (state == STATE.GAME){
             p.render(g);
             ups.render(g);
             health.render(g);
+            inGameMenu.render(g);
 
         } else if (state == STATE.MENU){
             menu.render(g);
         }
+
         if (ups.isTouching(p.getBounds())) {
             ups.setPuIsVisable(false);
             p.setVolMod(2);
