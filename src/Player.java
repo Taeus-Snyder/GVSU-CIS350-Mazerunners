@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 
 public class Player {
 
+    //test upload
     private double x; // x-coordinate of player
     private double y; // y-coordinate of player
     private double volX = 0;
