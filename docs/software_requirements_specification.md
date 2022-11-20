@@ -1,6 +1,6 @@
 # Overview
 This contains our software requirements specifications. The purpose of which is to define the scope of the project and identify the characteristics of the system.
-# Fuctional Requirements
+# Functional Requirements
   1. Player Mechanics
       1. Player shall move via keyboard inputs
       2. Player shall have a dynamic health
