@@ -5,11 +5,11 @@ import java.awt.image.BufferedImage;
 
 public class Player {
 
-    //test upload
     private double x; // x-coordinate of player
     private double y; // y-coordinate of player
     private double volX = 0;
     private double volY = 0;
+    public double volMod = 1;
 
     private BufferedImage player;
 
@@ -24,12 +24,28 @@ public class Player {
     }
 
     public void tick(){
-        x += volX;
-        y += volY;
+        if (volX != 0 && volY != 0) {
+            x += volX / 2 * volMod;
+            y += volY / 2 * volMod;
+        }
+        else {
+            x += volX * volMod;
+            y += volY * volMod;
+        }
     }
 
     public void render(Graphics g){
         g.drawImage(player, (int)x, (int)y, null);
+    }
+
+    public double[] getBounds() {
+        double[] bounds = new double[4];
+        bounds[0] = getX();
+        bounds[1] = getY();
+        bounds[2] = getX() + player.getWidth();
+        bounds[3] = getY() + player.getHeight();
+
+        return bounds;
     }
 
     public double getX(){
@@ -56,4 +72,5 @@ public class Player {
         this.volY = volY;
     }
 
+    public void setVolMod(double volMod) { this.volMod = volMod; }
 }
