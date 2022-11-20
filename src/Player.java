@@ -10,6 +10,7 @@ public class Player {
     private double volX = 0;
     private double volY = 0;
     public double volMod = 1;
+//    public int health = 3;
 
     private BufferedImage player;
 
@@ -47,6 +48,14 @@ public class Player {
 
         return bounds;
     }
+
+//    public void setHealth(int change) {
+//        this.health += change;
+//    }
+//
+//    public int getHealth(){
+//        return health;
+//    }
 
     public double getX(){
         return x;

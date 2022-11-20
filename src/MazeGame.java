@@ -28,6 +28,8 @@ public class MazeGame extends Canvas implements Runnable {
 
     private PowerUps ups;
 
+    private Health health;
+
     private Menu menu;
 
     public static enum STATE{
@@ -53,6 +55,7 @@ public class MazeGame extends Canvas implements Runnable {
         this.addMouseListener(new MouseInput());
         p = new Player(200,200, this);
         ups = new PowerUps(64, 64, this);
+        health = new Health(256, 64, this);
 
         menu = new Menu();
     }
@@ -136,6 +139,7 @@ public class MazeGame extends Canvas implements Runnable {
         if (state == STATE.GAME){
             p.render(g);
             ups.render(g);
+            health.render(g);
 
         } else if (state == STATE.MENU){
             menu.render(g);
@@ -143,6 +147,11 @@ public class MazeGame extends Canvas implements Runnable {
         if (ups.isTouching(p.getBounds())) {
             ups.setPuIsVisable(false);
             p.setVolMod(2);
+        }
+
+        if (health.isTouching(p.getBounds())) {
+            health.setHealthIsVisable(false);
+            health.setHealth(1);
         }
 
         g.dispose();
