@@ -29,7 +29,7 @@ public class MouseInput implements MouseListener {
 
             if (mx >= MazeGame.WIDTH / 2 +110 && mx <= MazeGame.WIDTH / 2 + 220){
                 if (my >= 250 && my <= 300){
-                    //pressed start button
+                    //pressed options button
                     MazeGame.state = MazeGame.STATE.OPTIONS;
                 }
             }
@@ -55,6 +55,9 @@ public class MouseInput implements MouseListener {
                     MazeGame.state = MazeGame.STATE.MENU;
                 }
             }
+
+        }
+        else if (MazeGame.getState() == MazeGame.STATE.OPTIONS) { //options menu
 
         }
 

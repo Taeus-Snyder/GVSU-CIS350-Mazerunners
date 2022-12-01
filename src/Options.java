@@ -3,7 +3,7 @@ package game.src.main;
 import java.awt.*;
 
 public class Options {
-    /*public Rectangle startButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 150, 120, 50);
+    public Rectangle startButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 150, 120, 50);
     public Rectangle optionsButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 250, 120, 50);
     public Rectangle exitButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 350, 120, 50);
 
@@ -13,8 +13,8 @@ public class Options {
 
         Font font0 = new Font("arial", Font.BOLD, 50);
         g.setFont(font0);
-        g.setColor(Color.white);
-        g.drawString("HOLIDAY MAZE DASH", MazeGame.WIDTH / 6, 100);
+        g.setColor(Color.red);
+        g.drawString("Options", MazeGame.WIDTH / 6, 100);
 
         Font fnt1 = new Font("arial", Font.BOLD, 30);
         g.setFont(fnt1);
@@ -26,7 +26,11 @@ public class Options {
         g.drawString("Options", optionsButton.x + 3, optionsButton.y + 33);
         g2d.draw(optionsButton);
 
+        //look into how to enable toggle of keyboard input
+        // up to W, down to S, left to A, right to D
+        // will be two buttons overlapping a rectangle
+        // if one button is pressed, the other is unpressed
 
-    }*/
+    }
 
 }

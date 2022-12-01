@@ -14,7 +14,7 @@ public class Menu {
 
         Font font0 = new Font("arial", Font.BOLD, 50);
         g.setFont(font0);
-        g.setColor(Color.white);
+        g.setColor(Color.red);
         g.drawString("HOLIDAY MAZE DASH", MazeGame.WIDTH / 6, 100);
 
         Font fnt1 = new Font("arial", Font.BOLD, 30);
