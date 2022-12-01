@@ -34,6 +34,8 @@ public class MazeGame extends Canvas implements Runnable {
 
     private InGameMenu inGameMenu;
 
+    private Options options;
+
     public static enum STATE{
         MENU,
         GAME,
@@ -67,6 +69,7 @@ public class MazeGame extends Canvas implements Runnable {
 
         menu = new Menu();
         inGameMenu = new InGameMenu();
+        options = new Options();
     }
 
 
@@ -143,11 +146,10 @@ public class MazeGame extends Canvas implements Runnable {
         Graphics g = bs.getDrawGraphics();
 
         g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
-        if (state == STATE.MENU){
-            g.setColor(Color.red);
-            g.fillRect(0, 0, WIDTH*2, HEIGHT*2);
+        if (state == STATE.MENU || state == STATE.OPTIONS) {
+            g.setColor(Color.lightGray);
+            g.fillRect(0, 0, WIDTH * 2, HEIGHT * 2);
         }
-
 
         if (state == STATE.GAME){
             p.render(g);
@@ -155,8 +157,12 @@ public class MazeGame extends Canvas implements Runnable {
             health.render(g);
             inGameMenu.render(g);
 
-        } else if (state == STATE.MENU){
+        }
+        else if (state == STATE.MENU) {
             menu.render(g);
+        }
+        else if (state == STATE.OPTIONS) {
+            options.render(g);
         }
 
         if (ups.isTouching(p.getBounds())) {
