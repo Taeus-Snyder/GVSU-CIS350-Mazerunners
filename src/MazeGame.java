@@ -18,6 +18,8 @@ public class MazeGame extends Canvas implements Runnable {
     public final String TITLE = "Maze Game";
 
     public boolean running = false;
+    private boolean mazeRendered = false;
+
     private Thread thread;
 
     private BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
@@ -35,6 +37,8 @@ public class MazeGame extends Canvas implements Runnable {
     private InGameMenu inGameMenu;
 
     private Options options;
+
+    private MazeLogic mazeGen;
 
     public static enum STATE{
         MENU,
@@ -70,6 +74,11 @@ public class MazeGame extends Canvas implements Runnable {
         menu = new Menu();
         inGameMenu = new InGameMenu();
         options = new Options();
+        try {
+            mazeGen = new MazeLogic("src\\assets\\maze.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -152,10 +161,15 @@ public class MazeGame extends Canvas implements Runnable {
         }
 
         if (state == STATE.GAME){
-            p.render(g);
+            try {
+                mazeGen.render(g,0 ,0);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             ups.render(g);
             health.render(g);
             inGameMenu.render(g);
+            p.render(g);
 
         }
         else if (state == STATE.MENU) {
