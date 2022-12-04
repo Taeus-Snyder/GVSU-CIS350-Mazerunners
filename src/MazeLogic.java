@@ -73,7 +73,7 @@ public class MazeLogic {
         BufferedImage image = ImageIO.read(new FileInputStream("src\\assets\\brickTexture1.png"));
 
         for (int i = 0; i < getRows(); i++) {
-            y = (wallHeight*i + 10);
+            y = (wallHeight*i);
             for (int j = 0; j < getCols(); j++) {
                 x = (wallWidth*j);
                 if(maze[i][j] == '|'){

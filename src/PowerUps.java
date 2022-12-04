@@ -17,8 +17,8 @@ public class PowerUps {
 
         SpriteSheet ss = new SpriteSheet(game.getSpriteSheet());
 
-        powerUps = ss.grabImage(3, 1, 32, 32);
-        display = ss.grabImage(2,3,128,32);
+        powerUps = ss.grabImage(3, 1, 20, 20);
+        display = ss.grabImage(2,3,80,20);
     }
 
     public void render(Graphics g) {
