@@ -10,7 +10,7 @@ public class Player {
     private double volX = 0;
     private double volY = 0;
     public double volMod = 1;
-//    public int health = 3;
+//    public int health = 300;
 
     private BufferedImage player;
 
