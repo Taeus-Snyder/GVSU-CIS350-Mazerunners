@@ -58,12 +58,10 @@ public class MazeGame extends Canvas implements Runnable {
         BufferedImageLoader loader = new BufferedImageLoader();
         try{
             spriteSheet = loader.loadImage("spritesheet.png");
-            //edit file name once sprite sheet has been created
         }
         catch(IOException e){
             e.printStackTrace();
         }
-
 
         this.addKeyListener(new KeyInput(this));
         this.addMouseListener(new MouseInput());
