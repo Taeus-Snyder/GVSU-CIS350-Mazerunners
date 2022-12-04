@@ -1,21 +1,33 @@
 package game.src.main;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class Menu {
-
-    public Rectangle startButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 150, 120, 50);
-    public Rectangle optionsButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 250, 120, 50);
-    public Rectangle exitButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 350, 120, 50);
+    private BufferedImage santa;
+    public Rectangle startButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 250, 120, 50);
+    public Rectangle optionsButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 350, 120, 50);
+    public Rectangle exitButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 450, 120, 50);
 
 
     public void render (Graphics g){
-        Graphics2D g2d = (Graphics2D) g;
+        BufferedImageLoader loader = new BufferedImageLoader();
+        try{
+            santa = loader.loadImage("santa1.png");
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
 
-        Font font0 = new Font("arial", Font.BOLD, 50);
+        Graphics2D g2d = (Graphics2D) g;
+        g.drawImage(santa, 10, 250, null);
+        Font font0 = new Font("arial", Font.BOLD, 60);
         g.setFont(font0);
         g.setColor(Color.red);
-        g.drawString("HOLIDAY MAZE DASH", MazeGame.WIDTH / 6, 100);
+        g.drawString("HOLIDAY MAZE DASH", MazeGame.WIDTH / 8, 100);
+
+
 
         Font fnt1 = new Font("arial", Font.BOLD, 30);
         g.setFont(fnt1);
