@@ -12,7 +12,7 @@ import java.nio.Buffer;
 public class MazeGame extends Canvas implements Runnable {
 
     public static final long serialVersionUID = 1L;
-    public static final int WIDTH = 320;
+    public static final int WIDTH = 360;
     public static final int HEIGHT = WIDTH / 12 * 9;
     public static final int SCALE = 2;
     public final String TITLE = "Maze Game";
