@@ -12,7 +12,7 @@ import java.nio.Buffer;
 public class MazeGame extends Canvas implements Runnable {
 
     public static final long serialVersionUID = 1L;
-    public static final int WIDTH = 320;
+    public static final int WIDTH = 360;
     public static final int HEIGHT = WIDTH / 12 * 9;
     public static final int SCALE = 2;
     public final String TITLE = "Maze Game";
@@ -58,12 +58,10 @@ public class MazeGame extends Canvas implements Runnable {
         BufferedImageLoader loader = new BufferedImageLoader();
         try{
             spriteSheet = loader.loadImage("spritesheet.png");
-            //edit file name once sprite sheet has been created
         }
         catch(IOException e){
             e.printStackTrace();
         }
-
 
         this.addKeyListener(new KeyInput(this));
         this.addMouseListener(new MouseInput());
