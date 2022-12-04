@@ -21,20 +21,20 @@ public class MouseInput implements MouseListener {
         if (MazeGame.getState() == MazeGame.STATE.MENU){
             //start button
             if (mx >= MazeGame.WIDTH / 2 +110 && mx <= MazeGame.WIDTH / 2 + 220){
-                if (my >= 150 && my <= 200){
+                if (my >= 250 && my <= 300){
                     //pressed start button
                     MazeGame.state = MazeGame.STATE.GAME;
                 }
             }
 
             if (mx >= MazeGame.WIDTH / 2 +110 && mx <= MazeGame.WIDTH / 2 + 220){
-                if (my >= 250 && my <= 300){
+                if (my >= 350 && my <= 400){
                     //pressed options button
                     MazeGame.state = MazeGame.STATE.OPTIONS;
                 }
             }
             if (mx >= MazeGame.WIDTH / 2 +110 && mx <= MazeGame.WIDTH / 2 + 220){
-                if (my >= 350 && my <= 400){
+                if (my >= 450 && my <= 500){
                     //pressed exit button
                     System.exit(1);
                 }
