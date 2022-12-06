@@ -53,12 +53,18 @@ public class MouseInput implements MouseListener {
                     //pressed options button
                     //will return to main menu for now until options in game box has been created
                     MazeGame.state = MazeGame.STATE.MENU;
+
+                    //generate pop down menu w/ return to main menu, exit game, cancel
                 }
             }
 
         }
         else if (MazeGame.getState() == MazeGame.STATE.OPTIONS) { //options menu
+            //if wsad is pressed, highlight w and unhighlight up arrow
+            //repeat for arrows
 
+            //if save button is pressed, set up/down/right/left variables to equal VK_ of the highlighted keys
+            //if default button is pressed, set highlights to arrow keys and set up/down/right/left variables to arrow keys
         }
 
 

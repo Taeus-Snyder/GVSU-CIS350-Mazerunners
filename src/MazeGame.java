@@ -195,38 +195,28 @@ public class MazeGame extends Canvas implements Runnable {
         int key = e.getKeyCode();
 
         if (state == STATE.GAME){
-            if (key == KeyEvent.VK_RIGHT){
+            if (key == options.right){
                 p.setVolX(4);
-                //p.setX(p.getX() + 5);
-            } else if (key == KeyEvent.VK_LEFT){
+            } else if (key == options.left){
                 p.setVolX(-4);
-                //p.setX(p.getX() - 5);
-            } else if (key == KeyEvent.VK_DOWN){
+            } else if (key == options.down){
                 p.setVolY(4);
-                //p.setY(p.getY() + 5);
-            } else if (key == KeyEvent.VK_UP){
+            } else if (key == options.up){
                 p.setVolY(-4);
-                //p.setY(p.getY() - 5);
             }
-        } else if (state == STATE.MENU){
-
         }
     }
     public void keyReleased(KeyEvent e){
         int key = e.getKeyCode();
 
-        if (key == KeyEvent.VK_RIGHT){
+        if (key == options.right){
             p.setVolX(0);
-            //p.setX(p.getX() + 5);
-        } else if (key == KeyEvent.VK_LEFT){
+        } else if (key == options.left){
             p.setVolX(0);
-            //p.setX(p.getX() - 5);
-        } else if (key == KeyEvent.VK_DOWN){
+        } else if (key == options.down){
             p.setVolY(0);
-            //p.setY(p.getY() + 5);
-        } else if (key == KeyEvent.VK_UP){
+        } else if (key == options.up){
             p.setVolY(0);
-            //p.setY(p.getY() - 5);
         }
     }
 

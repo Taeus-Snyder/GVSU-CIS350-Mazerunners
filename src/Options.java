@@ -1,12 +1,17 @@
 package game.src.main;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
 public class Options {
-    public Rectangle startButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 150, 120, 50);
-    public Rectangle optionsButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 250, 120, 50);
-    public Rectangle exitButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 350, 120, 50);
+    public Rectangle lettersButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 150, 120, 50);
+    public Rectangle arrowsButton = new Rectangle(MazeGame.WIDTH / 2 + 110, 250, 120, 50);
 
+
+    public int up = KeyEvent.VK_UP;
+    public int down = KeyEvent.VK_DOWN;
+    public int right = KeyEvent.VK_RIGHT;
+    public int left = KeyEvent.VK_LEFT;
 
     public void render (Graphics g){
         Graphics2D g2d = (Graphics2D) g;
@@ -19,17 +24,14 @@ public class Options {
         Font fnt1 = new Font("arial", Font.BOLD, 30);
         g.setFont(fnt1);
 
-        g.drawString("Start", startButton.x + 24, startButton.y + 33);
-        g2d.draw(startButton);
-        g.drawString("Exit", exitButton.x + 29, exitButton.y + 33);
-        g2d.draw(exitButton);
-        g.drawString("Options", optionsButton.x + 3, optionsButton.y + 33);
-        g2d.draw(optionsButton);
+        g.drawString("WSAD", lettersButton.x + 29, lettersButton.y + 33);
+        g2d.draw(lettersButton);
+        g.drawString("<>^v", arrowsButton.x + 29, arrowsButton.y + 33);
+        g2d.draw(arrowsButton);
 
-        //look into how to enable toggle of keyboard input
-        // up to W, down to S, left to A, right to D
-        // will be two buttons overlapping a rectangle
         // if one button is pressed, the other is unpressed
+        //save button to set the variables
+        //if unsaved, the highlight will change back to default once you change states
 
     }
 

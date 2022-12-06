@@ -18,7 +18,7 @@ public class Health {
 
         SpriteSheet ss = new SpriteSheet(game.getSpriteSheet());
 
-        health = ss.grabImage(4, 1, 32, 32);
+        health = ss.grabImage(4, 1, 20, 20);
     }
 
     public void render(Graphics g) {
