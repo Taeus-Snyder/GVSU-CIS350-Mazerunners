@@ -20,7 +20,7 @@ public class Enemy {
 
         SpriteSheet ss = new SpriteSheet(game.getSpriteSheet());
 
-        player = ss.grabImage(3, 1, 20, 20);
+        player = ss.grabImage(5, 1, 15, 15);
         //change coordinates depending on future sprite sheet
     }
 
