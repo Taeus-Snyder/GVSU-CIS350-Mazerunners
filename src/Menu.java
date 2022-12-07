@@ -13,12 +13,12 @@ public class Menu {
 
     public void render (Graphics g){
         BufferedImageLoader loader = new BufferedImageLoader();
-        try{
-            santa = loader.loadImage("santa1.png");
-        }
-        catch(IOException e){
-            e.printStackTrace();
-        }
+       // try{
+       //     santa = loader.loadImage("santa1.png");
+       // }
+       // catch(IOException e){
+       //     e.printStackTrace();
+       // }
 
         Graphics2D g2d = (Graphics2D) g;
         g.drawImage(santa, 10, 250, null);

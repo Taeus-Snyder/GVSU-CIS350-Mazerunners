@@ -7,6 +7,7 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.Buffer;
+import java.util.Random;
 
 
 public class MazeGame extends Canvas implements Runnable {
@@ -27,6 +28,8 @@ public class MazeGame extends Canvas implements Runnable {
 
 
     private Player p;
+
+    private Enemy e;
 
     private PowerUps ups;
 
@@ -57,26 +60,27 @@ public class MazeGame extends Canvas implements Runnable {
         requestFocus();
         BufferedImageLoader loader = new BufferedImageLoader();
         try{
-            spriteSheet = loader.loadImage("spritesheet20.png");
+            spriteSheet = loader.loadImage("spritesheet.png");
         }
         catch(IOException e){
             e.printStackTrace();
         }
-
+        try {
+            mazeGen = new MazeLogic( "src\\assets\\maze.txt", 0, 0);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         this.addKeyListener(new KeyInput(this));
         this.addMouseListener(new MouseInput());
-        p = new Player(200,200, this);
+        p = new Player(mazeGen.getMazeX(), mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
+        e = new Enemy(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
         ups = new PowerUps(64, 64, this);
         health = new Health(256, 64, this);
 
         menu = new Menu();
         inGameMenu = new InGameMenu();
         options = new Options();
-        try {
-            mazeGen = new MazeLogic("src\\assets\\maze.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
 
@@ -137,6 +141,8 @@ public class MazeGame extends Canvas implements Runnable {
     private void tick(){
         if (state == STATE.GAME){
             p.tick();
+            e.tick();
+
         }
 
     }
@@ -160,7 +166,7 @@ public class MazeGame extends Canvas implements Runnable {
 
         if (state == STATE.GAME){
             try {
-                mazeGen.render(g,0 ,0);
+                mazeGen.render(g);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -168,6 +174,7 @@ public class MazeGame extends Canvas implements Runnable {
             health.render(g);
             inGameMenu.render(g);
             p.render(g);
+            e.render(g);
 
         }
         else if (state == STATE.MENU) {
@@ -193,16 +200,28 @@ public class MazeGame extends Canvas implements Runnable {
 
     public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
+        Random rand = new Random();
 
-        if (state == STATE.GAME){
-            if (key == options.right){
+        if (state == STATE.GAME) {
+            int direction = rand.nextInt(4);
+            if (key == options.right) {
                 p.setVolX(4);
-            } else if (key == options.left){
+            } else if (key == options.left) {
                 p.setVolX(-4);
-            } else if (key == options.down){
+            } else if (key == options.down) {
                 p.setVolY(4);
-            } else if (key == options.up){
+            } else if (key == options.up) {
                 p.setVolY(-4);
+            }
+
+            if (direction == 0) {
+                this.e.setVolX(4);
+            } else if (direction == 1) {
+                this.e.setVolX(-4);
+            } else if (direction == 2) {
+                this.e.setVolY(4);
+            } else if (direction == 3) {
+                this.e.setVolY(-4);
             }
         }
     }
@@ -218,6 +237,9 @@ public class MazeGame extends Canvas implements Runnable {
         } else if (key == options.up){
             p.setVolY(0);
         }
+
+        this.e.setVolX(0);
+        this.e.setVolY(0);
     }
 
     public BufferedImage getSpriteSheet(){
