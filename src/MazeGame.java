@@ -60,7 +60,7 @@ public class MazeGame extends Canvas implements Runnable {
         requestFocus();
         BufferedImageLoader loader = new BufferedImageLoader();
         try{
-            spriteSheet = loader.loadImage("spritesheet20.png");
+            spriteSheet = loader.loadImage("spritesheet16.png");
         }
         catch(IOException e){
             e.printStackTrace();
