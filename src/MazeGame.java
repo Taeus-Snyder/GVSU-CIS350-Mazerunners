@@ -39,7 +39,7 @@ public class MazeGame extends Canvas implements Runnable {
 
     private InGameMenu inGameMenu;
 
-    private Options options;
+    public static Options options;
 
     private MazeLogic mazeGen;
 
@@ -176,6 +176,7 @@ public class MazeGame extends Canvas implements Runnable {
             p.render(g);
             e.render(g);
 
+
         }
         else if (state == STATE.MENU) {
             menu.render(g);
@@ -192,6 +193,19 @@ public class MazeGame extends Canvas implements Runnable {
         if (health.isTouching(p.getBounds())) {
             health.setHealthIsVisable(false);
             health.setHealth(1);
+        }
+
+        if (options.arrowsPressed){
+            options.up = KeyEvent.VK_UP;
+            options.down = KeyEvent.VK_DOWN;
+            options.right = KeyEvent.VK_RIGHT;
+            options.left = KeyEvent.VK_LEFT;
+        }
+        else {
+            options.up = KeyEvent.VK_W;
+            options.down = KeyEvent.VK_S;
+            options.right = KeyEvent.VK_D;
+            options.left = KeyEvent.VK_A;
         }
 
         g.dispose();
