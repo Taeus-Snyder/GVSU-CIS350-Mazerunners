@@ -1,7 +1,9 @@
 package game.src.main;
 
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.image.BufferStrategy;
 
 public class MouseInput implements MouseListener {
 
@@ -55,17 +57,38 @@ public class MouseInput implements MouseListener {
                     MazeGame.state = MazeGame.STATE.MENU;
 
                     //generate pop down menu w/ return to main menu, exit game, cancel
+
+                    Rectangle optionsBox = new Rectangle(MazeGame.WIDTH / 2 + 110, 400, 120, 50);
+
                 }
             }
 
         }
         else if (MazeGame.getState() == MazeGame.STATE.OPTIONS) { //options menu
-            //if wsad is pressed, highlight w and unhighlight up arrow
-            //repeat for arrows
 
-            //if save button is pressed, set up/down/right/left variables to equal VK_ of the highlighted keys
-            //if default button is pressed, set highlights to arrow keys and set up/down/right/left variables to arrow keys
+            //if "main menu" is pressed, return to main menu
+            if (mx >= MazeGame.WIDTH / 2  && mx <= MazeGame.WIDTH / 2 + 120){
+                if (my >= 250 && my <= 300){
+                    // pressed awsd
+                    MazeGame.options.arrowsPressed = false;
+                }
+            }
+
+            if (mx >= MazeGame.WIDTH && mx <= MazeGame.WIDTH + 120){
+                if (my >= 250 && my <= 300){
+                    // pressed arrows
+                    MazeGame.options.arrowsPressed = true;
+                }
+            }
+
+            if (mx >= MazeGame.WIDTH && mx <= MazeGame.WIDTH + 320){
+                if (my >= 450 && my <= 500){
+                    // pressed return to main menu
+                    MazeGame.state = MazeGame.STATE.MENU;
+                }
+            }
         }
+
 
 
     }

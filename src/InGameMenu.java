@@ -9,6 +9,7 @@ public class InGameMenu {
     public Rectangle exitButton = new Rectangle(MazeGame.WIDTH + 260 , 10, 50, 25);
 
 
+
     public void render (Graphics g){
         Graphics2D g2d = (Graphics2D) g;
 
