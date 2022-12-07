@@ -218,24 +218,18 @@ public class MazeGame extends Canvas implements Runnable {
 
         if (state == STATE.GAME) {
             int direction = rand.nextInt(4);
-            if (key == options.right) {
-                p.setVolX(4);
-            } else if (key == options.left) {
-                p.setVolX(-4);
-            } else if (key == options.down) {
-                p.setVolY(4);
-            } else if (key == options.up) {
-                p.setVolY(-4);
-            }
 
-            if (direction == 0) {
-                this.e.setVolX(4);
-            } else if (direction == 1) {
-                this.e.setVolX(-4);
-            } else if (direction == 2) {
-                this.e.setVolY(4);
-            } else if (direction == 3) {
-                this.e.setVolY(-4);
+            if (key == options.right) p.setVolX(4);
+            else if (key == options.left) p.setVolX(-4);
+            else if (key == options.down) p.setVolY(4);
+            else if (key == options.up) p.setVolY(-4);
+
+
+            if (key == options.right || key == options.left || key == options.up || key == options.down ) {
+                if (direction == 0) this.e.setVolX(4);
+                else if (direction == 1) this.e.setVolX(-4);
+                else if (direction == 2) this.e.setVolY(4);
+                else if (direction == 3) this.e.setVolY(-4);
             }
         }
     }
