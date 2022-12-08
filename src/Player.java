@@ -20,7 +20,7 @@ public class Player {
 
         SpriteSheet ss = new SpriteSheet(game.getSpriteSheet());
 
-        player = ss.grabImage(1, 1, 16, 16);
+        player = ss.grabImage(1, 1, 15, 15);
         //change coordinates depending on future sprite sheet
     }
 
