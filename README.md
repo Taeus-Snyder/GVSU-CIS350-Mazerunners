@@ -15,7 +15,7 @@ This is a top-down 2D game created using Java.
 * [Ryan Mansour](https://github.com/mansourr14/CIS350-HW2-Mansour) (Role 5, Developer)
 
 ## Prerequisites
-- JDK version 19.0.1
+- Oracle JDK version 19.0.1
 
 ## Run Instructions
 1. Download the .jar file of the application <here-link-to-be-added>
