@@ -43,10 +43,11 @@ public class MazeGame extends Canvas implements Runnable {
 
     private MazeLogic mazeGen;
 
-    public static enum STATE{
+    public enum STATE{
         MENU,
         GAME,
-        OPTIONS
+        OPTIONS,
+        GAMEOVER
     }
 
     public static STATE getState(){
