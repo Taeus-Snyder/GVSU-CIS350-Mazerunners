@@ -10,7 +10,6 @@ public class Player {
     private double volX = 0;
     private double volY = 0;
     public double volMod = 1;
-//    public int health = 300;
 
     private BufferedImage player;
 
@@ -49,13 +48,20 @@ public class Player {
         return bounds;
     }
 
-//    public void setHealth(int change) {
-//        this.health += change;
-//    }
-//
-//    public int getHealth(){
-//        return health;
-//    }
+    public boolean isTouching(double[] playerBounds) {
+        if (playerBounds[0] >= getX() && playerBounds[0] <= getX() + 32) {      //check if x is within bounds
+            if (playerBounds[1] >= getY() && playerBounds[1] <= getY() + 32)
+                return true;
+            if (playerBounds[3] >= getY() && playerBounds[3] <= getY() + 32)
+                return true;
+        }
+        if (playerBounds[2] >= getX() && playerBounds[2] <= getX() + 32) {
+            if (playerBounds[1] >= getY() && playerBounds[1] <= getY() + 32)
+                return true;
+            return playerBounds[3] >= getY() && playerBounds[3] <= getY() + 32;
+        }
+        return false;
+    }
 
     public double getX(){
         return x;

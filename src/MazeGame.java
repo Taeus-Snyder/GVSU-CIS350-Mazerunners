@@ -195,6 +195,17 @@ public class MazeGame extends Canvas implements Runnable {
             health.setHealth(1);
         }
 
+        if (p.isTouching(e.getBounds())) {
+            health.setHealth(-1);
+            e.setX(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16));
+            e.setY(mazeGen.getMazeY() + (mazeGen.getWallHeight()*16));
+            boolean dead = Integer.parseInt(health.getHealth()) == 0;
+            if (dead) {
+                dead = false; //made to compiling
+                //game state = end screen
+            }
+        }
+
         if (options.arrowsPressed){
             options.up = KeyEvent.VK_UP;
             options.down = KeyEvent.VK_DOWN;
