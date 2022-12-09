@@ -45,20 +45,23 @@ public class MouseInput implements MouseListener {
         else if (MazeGame.getState() == MazeGame.STATE.GAME){ //in-game menu
             if (mx >= MazeGame.WIDTH + 260 && mx <= MazeGame.WIDTH + 310){
                 if (my >= 10 && my <= 35){
-                    //pressed exit button
-                    System.exit(1);
+                    //pressed options button
+                    if (MazeGame.openBox) MazeGame.openBox = false;
+                    else MazeGame.openBox = true;
                 }
             }
 
-            if (mx >= MazeGame.WIDTH + 175 && mx <= MazeGame.WIDTH + 255){
-                if (my >= 10 && my <= 35){
-                    //pressed options button
-                    //will return to main menu for now until options in game box has been created
+            if (mx >= MazeGame.WIDTH + 280 && mx <= MazeGame.WIDTH + 330){
+                if (my >= 60 && my <= 85){
+                    //pressed exit button
+                    System.exit(1);
+
+                }
+            }
+            if (mx >= MazeGame.WIDTH + 275 && mx <= MazeGame.WIDTH + 275 +60){
+                if (my >= 90 && my <= 115){
+                    //pressed menu button
                     MazeGame.state = MazeGame.STATE.MENU;
-
-                    //generate pop down menu w/ return to main menu, exit game, cancel
-
-                    Rectangle optionsBox = new Rectangle(MazeGame.WIDTH / 2 + 110, 400, 120, 50);
 
                 }
             }

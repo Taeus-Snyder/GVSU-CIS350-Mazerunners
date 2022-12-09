@@ -52,6 +52,7 @@ public class MazeGame extends Canvas implements Runnable {
 
     public static Boolean dead = false;
     public static Boolean reset = false;
+    public static Boolean openBox = false;
 
     public enum STATE{
         MENU,
