@@ -22,7 +22,7 @@ public class Menu {
 
         Graphics2D g2d = (Graphics2D) g;
         g.drawImage(santa, 10, 250, null);
-        Font font0 = new Font("pacifico", Font.BOLD, 60);
+        Font font0 = new Font("lobster", Font.BOLD, 60);
         g.setFont(font0);
         g.setColor(Color.red);
         g.drawString("HOLIDAY MAZE DASH", MazeGame.WIDTH / 8, 100);
@@ -32,7 +32,7 @@ public class Menu {
         Font fnt1 = new Font("times new roman", Font.BOLD, 30);
         g.setFont(fnt1);
 
-        g.drawString("Collect presents to save Christmas!", MazeGame.WIDTH / 8, 150);
+        g.drawString("Collect the presents in time for Christmas!", MazeGame.WIDTH / 8 + 45, 150);
 
         Font fnt2 = new Font("times new roman", Font.BOLD, 30);
         g.setFont(fnt2);
@@ -42,6 +42,9 @@ public class Menu {
         g2d.draw(exitButton);
         g.drawString("Options", optionsButton.x + 7, optionsButton.y + 33);
         g2d.draw(optionsButton);
+
+
+
 
 
     }

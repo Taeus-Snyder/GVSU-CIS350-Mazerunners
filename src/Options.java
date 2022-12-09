@@ -54,6 +54,10 @@ public class Options {
             g2d.draw(arrowsButton);
 
         }
+        Font fnt3 = new Font("times new roman", Font.PLAIN, 30);
+        g.setFont(fnt3);
+        g.drawString("*letters", lettersButton.x + 17, lettersButton.y + + 83);
+        g.drawString("*arrows", arrowsButton.x + 15, arrowsButton.y + 83);
 
     }
 
