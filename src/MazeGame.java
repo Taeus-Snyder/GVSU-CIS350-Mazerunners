@@ -207,7 +207,7 @@ public class MazeGame extends Canvas implements Runnable {
             health.setHealth(-1);
             e.setX(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16));
             e.setY(mazeGen.getMazeY() + (mazeGen.getWallHeight()*16));
-            dead = Integer.parseInt(health.getHealth()) == 0;
+            dead = Integer.parseInt(health.getHealth()) <= 0;
             if (dead) {
                 state = STATE.GAMEOVER;
             }
