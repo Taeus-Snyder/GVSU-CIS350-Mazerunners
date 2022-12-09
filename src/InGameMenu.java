@@ -8,6 +8,7 @@ public class InGameMenu {
     public Rectangle optionsButton = new Rectangle(MazeGame.WIDTH + 260, 10, 80, 25);
     public Rectangle exitButton = new Rectangle(MazeGame.WIDTH + 280 ,60, 50, 25);
     public Rectangle menuButton = new Rectangle(MazeGame.WIDTH + 275 ,90, 60, 25);
+    public Rectangle restartButton = new Rectangle(MazeGame.WIDTH + 275 ,120, 60, 25);
 
 
 
@@ -29,6 +30,8 @@ public class InGameMenu {
             g2d.draw(exitButton);
             g.drawString("Menu", menuButton.x + 5, menuButton.y + 20);
             g2d.draw(menuButton);
+            g.drawString("Reset", restartButton.x + 5, restartButton.y + 20);
+            g2d.draw(restartButton);
         }
 
     }

@@ -65,6 +65,15 @@ public class MouseInput implements MouseListener {
 
                 }
             }
+            if (mx >= MazeGame.WIDTH + 275 && mx <= MazeGame.WIDTH + 275 +60){
+                if (my >= 120 && my <= 145){
+                    //pressed restart button
+                    MazeGame.reset = true;
+
+                    MazeGame.state = MazeGame.STATE.GAME;
+
+                }
+            }
 
         }
         else if (MazeGame.getState() == MazeGame.STATE.OPTIONS) { //options menu
