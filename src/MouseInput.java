@@ -25,6 +25,7 @@ public class MouseInput implements MouseListener {
             if (mx >= MazeGame.WIDTH / 2 +110 && mx <= MazeGame.WIDTH / 2 + 220){
                 if (my >= 250 && my <= 300){
                     //pressed start button
+                    //TODO: reset the game before changing states
                     MazeGame.state = MazeGame.STATE.GAME;
                 }
             }
@@ -85,6 +86,30 @@ public class MouseInput implements MouseListener {
                 if (my >= 450 && my <= 500){
                     // pressed return to main menu
                     MazeGame.state = MazeGame.STATE.MENU;
+                }
+            }
+        }
+        else if (MazeGame.state == MazeGame.STATE.GAMEOVER) { //game over screen (either you died or you completed a level)
+            if (mx >= MazeGame.WIDTH / 2 + 220 && mx <= MazeGame.WIDTH / 2 + 320){
+                if (my >= 375 && my <= 375 + 50){
+                    //pressed exit button
+                    System.exit(1);
+                }
+            }
+
+            if (mx >= MazeGame.WIDTH / 2 + 60 && mx <= MazeGame.WIDTH / 2 + 200){
+                if (my >= 375 && my <= 375 + 50){
+                    //pressed restart button
+
+                    //TODO: create reset button
+                }
+            }
+
+            if (mx >= MazeGame.WIDTH / 2 + 35 && mx <= MazeGame.WIDTH / 2 + 35 + 310){
+                if (my >= 300 && my <= 350){
+                    //pressed return to main menu button
+                    MazeGame.state = MazeGame.STATE.MENU;
+
                 }
             }
         }
