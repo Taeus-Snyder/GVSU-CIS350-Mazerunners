@@ -8,6 +8,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.Buffer;
 import java.util.Random;
+import java.util.function.BooleanSupplier;
 
 
 public class MazeGame extends Canvas implements Runnable {
@@ -39,9 +40,13 @@ public class MazeGame extends Canvas implements Runnable {
 
     private InGameMenu inGameMenu;
 
+    private GameOver gameOver;
+
     public static Options options;
 
     private MazeLogic mazeGen;
+
+    public static Boolean dead = false;
 
     public enum STATE{
         MENU,
@@ -81,6 +86,7 @@ public class MazeGame extends Canvas implements Runnable {
         menu = new Menu();
         inGameMenu = new InGameMenu();
         options = new Options();
+        gameOver = new GameOver();
 
     }
 
@@ -176,14 +182,15 @@ public class MazeGame extends Canvas implements Runnable {
             inGameMenu.render(g);
             p.render(g);
             e.render(g);
-
-
         }
         else if (state == STATE.MENU) {
             menu.render(g);
         }
         else if (state == STATE.OPTIONS) {
             options.render(g);
+        }
+        else if (state == STATE.GAMEOVER) {
+            gameOver.render(g);
         }
 
         if (ups.isTouching(p.getBounds())) {
@@ -200,10 +207,9 @@ public class MazeGame extends Canvas implements Runnable {
             health.setHealth(-1);
             e.setX(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16));
             e.setY(mazeGen.getMazeY() + (mazeGen.getWallHeight()*16));
-            boolean dead = Integer.parseInt(health.getHealth()) == 0;
+            dead = Integer.parseInt(health.getHealth()) == 0;
             if (dead) {
-                dead = false; //made to compiling
-                //game state = end screen
+                state = STATE.GAMEOVER;
             }
         }
 
