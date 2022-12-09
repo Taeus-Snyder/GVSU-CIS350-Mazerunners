@@ -1,13 +1,5 @@
 #!/usr/bin/python
 
-# Credit to Shaun Lebron for the initial bit of maze generation
-# Using this as a base for us to read the textfile, then have java read it into order to
-# edit it, and put objects such as the player, enemy, as well as edit shapes of the itself for our project
-# and whatever further changes we decide(d) to make
-
-# His full project going deeper with the pacman maze generation
-# https://github.com/shaunlebron/pacman-mazegen
-
 """
 Running this script spits out a random Pac-Man maze
 
