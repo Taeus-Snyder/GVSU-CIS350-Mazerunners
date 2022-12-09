@@ -48,6 +48,8 @@ public class MazeGame extends Canvas implements Runnable {
 
     public static Boolean dead = false;
 
+    public MazeLogic originalMaze;
+
     public enum STATE{
         MENU,
         GAME,
@@ -73,6 +75,7 @@ public class MazeGame extends Canvas implements Runnable {
         }
         try {
             mazeGen = new MazeLogic( "src\\assets\\maze.txt", 0, 0);
+            originalMaze = mazeGen;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -112,6 +115,8 @@ public class MazeGame extends Canvas implements Runnable {
         }
         System.exit(1);
     }
+
+
     public void run(){
         init();
         long lastTime = System.nanoTime();
@@ -145,6 +150,15 @@ public class MazeGame extends Canvas implements Runnable {
         stop();
     }
 
+    public void reset(){
+
+        mazeGen = originalMaze;
+
+        p = new Player(mazeGen.getMazeX(), mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
+        e = new Enemy(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
+        ups = new PowerUps(64, 64, this);
+        health = new Health(256, 64, this);
+    }
     private void tick(){
         if (state == STATE.GAME){
             p.tick();
@@ -185,6 +199,7 @@ public class MazeGame extends Canvas implements Runnable {
         }
         else if (state == STATE.MENU) {
             menu.render(g);
+            reset();
         }
         else if (state == STATE.OPTIONS) {
             options.render(g);
