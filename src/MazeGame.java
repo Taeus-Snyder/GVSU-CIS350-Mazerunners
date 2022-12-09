@@ -1,5 +1,6 @@
 package game.src.main;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -20,7 +21,6 @@ public class MazeGame extends Canvas implements Runnable {
     public final String TITLE = "Maze Game";
 
     public boolean running = false;
-    private boolean mazeRendered = false;
     private boolean touching = false;
 
     private Thread thread;
@@ -44,6 +44,8 @@ public class MazeGame extends Canvas implements Runnable {
     private Menu menu;
 
     private InGameMenu inGameMenu;
+
+    public static Boolean openBox = false;
 
     private GameOver gameOver;
 
@@ -76,6 +78,7 @@ public class MazeGame extends Canvas implements Runnable {
         BufferedImageLoader loader = new BufferedImageLoader();
         try{
             spriteSheet = loader.loadImage("spritesheet16.png");
+
         }
         catch(IOException e){
             e.printStackTrace();

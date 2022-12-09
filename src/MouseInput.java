@@ -52,11 +52,12 @@ public class MouseInput implements MouseListener {
                 if (my >= 10 && my <= 35){
                     //pressed options button
                     //will return to main menu for now until options in game box has been created
+                    if (MazeGame.openBox) MazeGame.openBox = false;
+                    else MazeGame.openBox = true;
                     MazeGame.state = MazeGame.STATE.MENU;
 
                     //generate pop down menu w/ return to main menu, exit game, cancel
 
-                    Rectangle optionsBox = new Rectangle(MazeGame.WIDTH / 2 + 110, 400, 120, 50);
 
                 }
             }
