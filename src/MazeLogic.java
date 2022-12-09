@@ -20,6 +20,7 @@ public class MazeLogic {
 
     public void readMaze(String mazefile) throws IOException {
         BufferedReader r = new BufferedReader(new FileReader(mazefile));
+        r = new BufferedReader(new FileReader(mazefile));
         String s;
 
         int rows = 0;
@@ -55,6 +56,10 @@ public class MazeLogic {
         }
         maze = new char[rows][cols]; //Initialize maze array based on size
         readMaze(mazefile); // read maze into class
+    }
+
+    public char getMazeAt(int r, int c){
+        return maze[r][c];
     }
 
     public String toString(){

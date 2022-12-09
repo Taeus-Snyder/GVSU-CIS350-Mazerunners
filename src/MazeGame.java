@@ -21,6 +21,7 @@ public class MazeGame extends Canvas implements Runnable {
 
     public boolean running = false;
     private boolean mazeRendered = false;
+    private boolean touching = false;
 
     private Thread thread;
 
@@ -33,6 +34,10 @@ public class MazeGame extends Canvas implements Runnable {
     private Enemy e;
 
     private PowerUps ups;
+
+    private Present present1;
+    private Present present2;
+    private Present present3;
 
     private Health health;
 
@@ -85,8 +90,12 @@ public class MazeGame extends Canvas implements Runnable {
         this.addMouseListener(new MouseInput());
         p = new Player(mazeGen.getMazeX(), mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
         e = new Enemy(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
-        ups = new PowerUps(64, 64, this);
-        health = new Health(256, 64, this);
+        ups = new PowerUps(mazeGen.getMazeX() + (16), mazeGen.getMazeY() + 32, this);
+        health = new Health(mazeGen.getMazeX() + (16* (mazeGen.getCols()-2)),  mazeGen.getMazeY() + (32), this);
+
+        present1 = new Present(mazeGen.getMazeX() + 16, mazeGen.getMazeY() + (16*(mazeGen.getRows()-2)), this);
+        present2 = new Present(mazeGen.getMazeX() + (16*(mazeGen.getCols()-2)), mazeGen.getMazeY() + (16*(mazeGen.getRows()-2)), this);
+        present3 = new Present(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
 
         menu = new Menu();
         inGameMenu = new InGameMenu();
@@ -158,8 +167,12 @@ public class MazeGame extends Canvas implements Runnable {
 
         p = new Player(mazeGen.getMazeX(), mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
         e = new Enemy(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
-        ups = new PowerUps(64, 64, this);
-        health = new Health(256, 64, this);
+        ups = new PowerUps(mazeGen.getMazeX() + (16), mazeGen.getMazeY() + 32, this);
+        health = new Health(mazeGen.getMazeX() + (16* (mazeGen.getCols()-2)),  mazeGen.getMazeY() + (32), this);
+
+        present1 = new Present(mazeGen.getMazeX() + 16, mazeGen.getMazeY() + (16*(mazeGen.getRows()-2)), this);
+        present2 = new Present(mazeGen.getMazeX() + (16*(mazeGen.getCols()-2)), mazeGen.getMazeY() + (16*(mazeGen.getRows()-2)), this);
+        present3 = new Present(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
 
         reset = false;
     }
@@ -198,8 +211,11 @@ public class MazeGame extends Canvas implements Runnable {
             ups.render(g);
             health.render(g);
             inGameMenu.render(g);
-            p.render(g);
-            e.render(g);
+            present1.render(g);
+            present2.render(g);
+            present3.render(g);
+            p.render(g, mazeGen.getMazeX(), mazeGen.getMazeY());
+            e.render(g, mazeGen.getMazeX(), mazeGen.getMazeY());
         }
         else if (state == STATE.MENU) {
             reset = true;
@@ -218,20 +234,44 @@ public class MazeGame extends Canvas implements Runnable {
             p.setVolMod(2);
         }
 
+        if(present1.isTouching((int)p.getX(), (int)p.getY())){
+            present1.setPresentIsVisable(false);
+            p.incPresents();
+        }
+
+        if(present2.isTouching((int)p.getX(), (int)p.getY())){
+            present2.setPresentIsVisable(false);
+            p.incPresents();
+
+        }
+
+        if(present3.isTouching((int)p.getX(), (int)p.getY())){
+            present3.setPresentIsVisable(false);
+            p.incPresents();
+
+        }
+
+        if(p.getpresentCount() == 3 && p.getrPos() == 16 && p.getcPos() == 27){
+            state = STATE.GAMEOVER;
+        }
+
 
         if (health.isTouching(p.getBounds())) {
             health.setHealthIsVisable(false);
             health.setHealth(1);
         }
 
-        if (p.isTouching(e.getBounds())) {
+        if (p.getX() == e.getX() && p.getY() == e.getY() && touching == false) {
+            touching = true;
             health.setHealth(-1);
             e.setX(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16));
             e.setY(mazeGen.getMazeY() + (mazeGen.getWallHeight()*16));
-            dead = Integer.parseInt(health.getHealth()) <= 0;
+            dead = Integer.parseInt(health.getHealth()) == 0;
             if (dead) {
                 state = STATE.GAMEOVER;
             }
+        }else if(p.getX() != e.getX() && p.getY() != e.getY()){
+            touching = false;
         }
 
         if (options.arrowsPressed){
@@ -258,18 +298,38 @@ public class MazeGame extends Canvas implements Runnable {
 
         if (state == STATE.GAME) {
             int direction = rand.nextInt(4);
+            int r = p.getrPos();
+            int c = p.getcPos();
 
-            if (key == options.right) p.setVolX(4);
-            else if (key == options.left) p.setVolX(-4);
-            else if (key == options.down) p.setVolY(4);
-            else if (key == options.up) p.setVolY(-4);
+            if (key == options.right){
+                if(c != 27 && mazeGen.getMazeAt(r,c + 1) != '|')p.incCPos();
+            }
+            else if (key == options.left) {
+                if(c != 0 && mazeGen.getMazeAt(r,c - 1) != '|')p.decCPos();
+            }
+            else if (key == options.down){
+                if(r != 31 && mazeGen.getMazeAt(r + 1,c) != '|')p.incRPos();
+            }
+            else if (key == options.up){
+                if(r != 0 && mazeGen.getMazeAt(r - 1,c) != '|')p.decRPos();
+            }
 
 
             if (key == options.right || key == options.left || key == options.up || key == options.down ) {
-                if (direction == 0) this.e.setVolX(4);
-                else if (direction == 1) this.e.setVolX(-4);
-                else if (direction == 2) this.e.setVolY(4);
-                else if (direction == 3) this.e.setVolY(-4);
+                r = this.e.getrPos();
+                c = this.e.getcPos();
+                if (direction == 0){
+                    if(c != 27 && mazeGen.getMazeAt(r,c + 1) != '|')this.e.incCPos();
+                }
+                else if (direction == 1){
+                    if(c != 0 && mazeGen.getMazeAt(r,c - 1) != '|')this.e.decCPos();
+                }
+                else if (direction == 2){
+                    if(r != 31 && mazeGen.getMazeAt(r + 1,c) != '|')this.e.incRPos();
+                }
+                else if (direction == 3){
+                    if(r != 0 && mazeGen.getMazeAt(r - 1, c) != '|')this.e.decRPos();
+                }
             }
         }
     }
