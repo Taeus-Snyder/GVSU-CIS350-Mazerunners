@@ -44,14 +44,14 @@ public class MazeGame extends Canvas implements Runnable {
     private Menu menu;
 
     private InGameMenu inGameMenu;
-
     private GameOver gameOver;
-
     public static Options options;
 
     private MazeLogic mazeGen;
+    public MazeLogic originalMaze;
 
     public static Boolean dead = false;
+    public static Boolean reset = false;
 
     public enum STATE{
         MENU,
@@ -78,6 +78,7 @@ public class MazeGame extends Canvas implements Runnable {
         }
         try {
             mazeGen = new MazeLogic( "src\\assets\\maze.txt", 0, 0);
+            originalMaze = mazeGen;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -98,6 +99,16 @@ public class MazeGame extends Canvas implements Runnable {
         options = new Options();
         gameOver = new GameOver();
 
+    }
+
+    public void reset(){
+        mazeGen = originalMaze;
+
+        p = new Player(mazeGen.getMazeX(), mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
+        e = new Enemy(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
+        ups = new PowerUps(64, 64, this);
+        health = new Health(256, 64, this);
+        reset = false;
     }
 
 
@@ -165,7 +176,7 @@ public class MazeGame extends Canvas implements Runnable {
     }
 
     private void render(){
-
+        if (reset) reset();
         BufferStrategy bs = this.getBufferStrategy();
 
         if (bs == null){
@@ -199,7 +210,9 @@ public class MazeGame extends Canvas implements Runnable {
             e.render(g, mazeGen.getMazeX(), mazeGen.getMazeY());
         }
         else if (state == STATE.MENU) {
+            reset = true;
             menu.render(g);
+            reset();
         }
         else if (state == STATE.OPTIONS) {
             options.render(g);
@@ -265,6 +278,7 @@ public class MazeGame extends Canvas implements Runnable {
             options.left = KeyEvent.VK_A;
         }
 
+        if (reset) reset();
         g.dispose();
         bs.show();
     }
