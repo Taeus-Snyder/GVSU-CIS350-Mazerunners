@@ -4,9 +4,9 @@ import java.awt.*;
 
 public class InGameMenu {
 
-    //public Rectangle optionsBox = new Rectangle(MazeGame.WIDTH / 2 + 110, 150, 120, 50);
-    public Rectangle optionsButton = new Rectangle(MazeGame.WIDTH + 175, 10, 80, 25);
-    public Rectangle exitButton = new Rectangle(MazeGame.WIDTH + 260 , 10, 50, 25);
+    public Rectangle optionsBox = new Rectangle(MazeGame.WIDTH +260, 50, 120, 180);
+    public Rectangle optionsButton = new Rectangle(MazeGame.WIDTH + 260, 10, 80, 25);
+    public Rectangle exitButton = new Rectangle(MazeGame.WIDTH + 280 ,60, 50, 25);
 
 
 
@@ -23,6 +23,9 @@ public class InGameMenu {
         g2d.draw(exitButton);
         g.drawString("Options", optionsButton.x + 3, optionsButton.y + 20);
         g2d.draw(optionsButton);
+        if (MazeGame.openBox) {
+            g2d.draw(optionsBox);
+        }
 
 
     }

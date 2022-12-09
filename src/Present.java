@@ -17,7 +17,7 @@ public class Present {
 
         SpriteSheet ss = new SpriteSheet(game.getSpriteSheet());
 
-        present = ss.grabImage(8, 1, 15, 15);
+        present = ss.grabImage(7, 2, 15, 15);
     }
 
     public void render(Graphics g) {
