@@ -9,10 +9,9 @@ public class Enemy {
     private double y; // y-coordinate of player
     private double volX = 0;
     private double volY = 0;
-    public double volMod = 1;
+    private double volMod = 1;
     private int rPos = 0;
     private int cPos = 0;
-//    public int health = 300;
 
     private BufferedImage player;
 
@@ -31,8 +30,8 @@ public class Enemy {
 
     public void tick(){
 
-            x += volX * volMod;
-            y += volY * volMod;
+        x += volX * volMod;
+        y += volY * volMod;
 
     }
 
@@ -67,6 +66,7 @@ public class Enemy {
         if(rPos == 0) return;
         this.cPos--;
     }
+
     public void render(Graphics g, int mazeX, int mazeY){
         x = mazeX + (cPos*16);
         y = mazeY + (rPos*16);
@@ -97,14 +97,6 @@ public class Enemy {
         }
         return false;
     }
-
-//    public void setHealth(int change) {
-//        this.health += change;
-//    }
-//
-//    public int getHealth(){
-//        return health;
-//    }
 
     public double getX(){
         return x;

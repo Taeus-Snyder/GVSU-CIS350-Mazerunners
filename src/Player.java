@@ -9,7 +9,7 @@ public class Player {
     private double y; // y-coordinate of player
     private double volX = 0;
     private double volY = 0;
-    public double volMod = 1;
+    private double volMod = 1;
     private int rPos = 0;
     private int cPos = 0;
     private int presentCount = 0;
@@ -31,8 +31,8 @@ public class Player {
 
     public void tick(){
 
-            x += volX * volMod;
-            y += volY * volMod;
+        x += volX * volMod;
+        y += volY * volMod;
 
     }
 

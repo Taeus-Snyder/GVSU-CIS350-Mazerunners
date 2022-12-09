@@ -1,6 +1,5 @@
 package game.src.main;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -21,6 +20,7 @@ public class MazeGame extends Canvas implements Runnable {
     public final String TITLE = "Maze Game";
 
     public boolean running = false;
+    private boolean mazeRendered = false;
     private boolean touching = false;
 
     private Thread thread;
@@ -45,8 +45,6 @@ public class MazeGame extends Canvas implements Runnable {
 
     private InGameMenu inGameMenu;
 
-    public static Boolean openBox = false;
-
     private GameOver gameOver;
 
     public static Options options;
@@ -54,10 +52,6 @@ public class MazeGame extends Canvas implements Runnable {
     private MazeLogic mazeGen;
 
     public static Boolean dead = false;
-
-    public static Boolean reset = false;
-
-    public MazeLogic originalMaze;
 
     public enum STATE{
         MENU,
@@ -78,14 +72,12 @@ public class MazeGame extends Canvas implements Runnable {
         BufferedImageLoader loader = new BufferedImageLoader();
         try{
             spriteSheet = loader.loadImage("spritesheet16.png");
-
         }
         catch(IOException e){
             e.printStackTrace();
         }
         try {
             mazeGen = new MazeLogic( "src\\assets\\maze.txt", 0, 0);
-            originalMaze = mazeGen;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -99,6 +91,7 @@ public class MazeGame extends Canvas implements Runnable {
         present1 = new Present(mazeGen.getMazeX() + 16, mazeGen.getMazeY() + (16*(mazeGen.getRows()-2)), this);
         present2 = new Present(mazeGen.getMazeX() + (16*(mazeGen.getCols()-2)), mazeGen.getMazeY() + (16*(mazeGen.getRows()-2)), this);
         present3 = new Present(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
+
 
         menu = new Menu();
         inGameMenu = new InGameMenu();
@@ -129,8 +122,6 @@ public class MazeGame extends Canvas implements Runnable {
         }
         System.exit(1);
     }
-
-
     public void run(){
         init();
         long lastTime = System.nanoTime();
@@ -164,21 +155,6 @@ public class MazeGame extends Canvas implements Runnable {
         stop();
     }
 
-    public void reset(){
-
-        mazeGen = originalMaze;
-
-        p = new Player(mazeGen.getMazeX(), mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
-        e = new Enemy(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
-        ups = new PowerUps(mazeGen.getMazeX() + (16), mazeGen.getMazeY() + 32, this);
-        health = new Health(mazeGen.getMazeX() + (16* (mazeGen.getCols()-2)),  mazeGen.getMazeY() + (32), this);
-
-        present1 = new Present(mazeGen.getMazeX() + 16, mazeGen.getMazeY() + (16*(mazeGen.getRows()-2)), this);
-        present2 = new Present(mazeGen.getMazeX() + (16*(mazeGen.getCols()-2)), mazeGen.getMazeY() + (16*(mazeGen.getRows()-2)), this);
-        present3 = new Present(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
-
-        reset = false;
-    }
     private void tick(){
         if (state == STATE.GAME){
             p.tick();
@@ -189,7 +165,7 @@ public class MazeGame extends Canvas implements Runnable {
     }
 
     private void render(){
-        if (reset) reset();
+
         BufferStrategy bs = this.getBufferStrategy();
 
         if (bs == null){
@@ -204,6 +180,8 @@ public class MazeGame extends Canvas implements Runnable {
             g.setColor(Color.lightGray);
             g.fillRect(0, 0, WIDTH * 2, HEIGHT * 2);
         }
+
+
 
         if (state == STATE.GAME){
             try {
@@ -221,7 +199,6 @@ public class MazeGame extends Canvas implements Runnable {
             e.render(g, mazeGen.getMazeX(), mazeGen.getMazeY());
         }
         else if (state == STATE.MENU) {
-            reset = true;
             menu.render(g);
         }
         else if (state == STATE.OPTIONS) {
@@ -230,7 +207,6 @@ public class MazeGame extends Canvas implements Runnable {
         else if (state == STATE.GAMEOVER) {
             gameOver.render(g);
         }
-
 
         if (ups.isTouching(p.getBounds())) {
             ups.setPuIsVisable(false);
@@ -257,7 +233,6 @@ public class MazeGame extends Canvas implements Runnable {
         if(p.getpresentCount() == 3 && p.getrPos() == 16 && p.getcPos() == 27){
             state = STATE.GAMEOVER;
         }
-
 
         if (health.isTouching(p.getBounds())) {
             health.setHealthIsVisable(false);
@@ -290,7 +265,6 @@ public class MazeGame extends Canvas implements Runnable {
             options.left = KeyEvent.VK_A;
         }
 
-        if (reset) reset();
         g.dispose();
         bs.show();
     }
@@ -334,6 +308,8 @@ public class MazeGame extends Canvas implements Runnable {
                     if(r != 0 && mazeGen.getMazeAt(r - 1, c) != '|')this.e.decRPos();
                 }
             }
+
+            System.out.println(p.getX() + " " + p.getY());
         }
     }
     public void keyReleased(KeyEvent e){
