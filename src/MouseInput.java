@@ -25,7 +25,6 @@ public class MouseInput implements MouseListener {
             if (mx >= MazeGame.WIDTH / 2 +110 && mx <= MazeGame.WIDTH / 2 + 220){
                 if (my >= 250 && my <= 300){
                     //pressed start button
-                    //TODO: reset the game before changing states
                     MazeGame.state = MazeGame.STATE.GAME;
                 }
             }
@@ -101,7 +100,9 @@ public class MouseInput implements MouseListener {
                 if (my >= 375 && my <= 375 + 50){
                     //pressed restart button
 
-                    //TODO: create reset button
+                    MazeGame.reset = true;
+                    MazeGame.state = MazeGame.STATE.GAME;
+
                 }
             }
 
