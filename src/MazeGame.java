@@ -48,6 +48,8 @@ public class MazeGame extends Canvas implements Runnable {
 
     public static Boolean dead = false;
 
+    public static Boolean reset = false;
+
     public MazeLogic originalMaze;
 
     public enum STATE{
@@ -158,6 +160,8 @@ public class MazeGame extends Canvas implements Runnable {
         e = new Enemy(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
         ups = new PowerUps(64, 64, this);
         health = new Health(256, 64, this);
+
+        reset = false;
     }
     private void tick(){
         if (state == STATE.GAME){
@@ -169,7 +173,7 @@ public class MazeGame extends Canvas implements Runnable {
     }
 
     private void render(){
-
+        if (reset) reset();
         BufferStrategy bs = this.getBufferStrategy();
 
         if (bs == null){
@@ -198,8 +202,8 @@ public class MazeGame extends Canvas implements Runnable {
             e.render(g);
         }
         else if (state == STATE.MENU) {
+            reset = true;
             menu.render(g);
-            reset();
         }
         else if (state == STATE.OPTIONS) {
             options.render(g);
@@ -208,10 +212,12 @@ public class MazeGame extends Canvas implements Runnable {
             gameOver.render(g);
         }
 
+
         if (ups.isTouching(p.getBounds())) {
             ups.setPuIsVisable(false);
             p.setVolMod(2);
         }
+
 
         if (health.isTouching(p.getBounds())) {
             health.setHealthIsVisable(false);
@@ -241,6 +247,7 @@ public class MazeGame extends Canvas implements Runnable {
             options.left = KeyEvent.VK_A;
         }
 
+        if (reset) reset();
         g.dispose();
         bs.show();
     }
