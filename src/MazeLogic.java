@@ -20,7 +20,6 @@ public class MazeLogic {
 
     public void readMaze(String mazefile) throws IOException {
         BufferedReader r = new BufferedReader(new FileReader(mazefile));
-        r = new BufferedReader(new FileReader(mazefile));
         String s;
 
         int rows = 0;
