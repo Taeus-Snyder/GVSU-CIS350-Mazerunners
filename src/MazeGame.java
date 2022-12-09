@@ -107,8 +107,14 @@ public class MazeGame extends Canvas implements Runnable {
 
         p = new Player(mazeGen.getMazeX(), mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
         e = new Enemy(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
-        ups = new PowerUps(64, 64, this);
-        health = new Health(256, 64, this);
+        ups = new PowerUps(mazeGen.getMazeX() + (16), mazeGen.getMazeY() + 32, this);
+        health = new Health(mazeGen.getMazeX() + (16* (mazeGen.getCols()-2)),  mazeGen.getMazeY() + (32), this);
+
+        present1 = new Present(mazeGen.getMazeX() + 16, mazeGen.getMazeY() + (16*(mazeGen.getRows()-2)), this);
+        present2 = new Present(mazeGen.getMazeX() + (16*(mazeGen.getCols()-2)), mazeGen.getMazeY() + (16*(mazeGen.getRows()-2)), this);
+        present3 = new Present(mazeGen.getMazeX() + ((mazeGen.getCols()-1)*16) , mazeGen.getMazeY() + (mazeGen.getWallHeight()*16), this);
+
+
         reset = false;
     }
 
