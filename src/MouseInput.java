@@ -97,8 +97,8 @@ public class MouseInput implements MouseListener {
             if (mx >= MazeGame.WIDTH / 2 + 60 && mx <= MazeGame.WIDTH / 2 + 200){
                 if (my >= 375 && my <= 375 + 50){
                     //pressed restart button
-                    //reset();
-                    //MazeGame.state = MazeGame.STATE.GAME;
+                    MazeGame.reset = true;
+                    MazeGame.state = MazeGame.STATE.GAME;
 
                 }
             }
