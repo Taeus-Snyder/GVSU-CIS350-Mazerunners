@@ -47,11 +47,11 @@ This contains our final software requirements specifications. The purpose of whi
 ### Menus and Displays
 | ID | Requirement |
 | :-------------: | :----------: |
-| NFR6 | Menu shall respond in ~5 seconds |
+| NFR6 | Main menu shall open in ~15 seconds |
 | NFR7 | Menu shall be easy to navigate |
 | NFR8 | Menu shall be easy to navigate |
-| NFR9 | Menu shall transition to different screens smoothly |
-| NFR10 | Menu shall have high contrast |
+| NFR9 | Menu shall transition to different screens in ~2 seconds |
+| NFR10 | Menu text shall have high contrast against the background |
   
 ### Enemies
 | ID | Requirement |
