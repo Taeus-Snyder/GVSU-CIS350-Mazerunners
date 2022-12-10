@@ -67,12 +67,12 @@ This contains our final software requirements specifications. The purpose of whi
 Here are the links for the artifacts developed for the project
   
 - [Project proposal](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/docs/updated-proposal.md)
-- [Midterm update](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/docs/Maze%20Runners%20Midterm%20Update.pdf) (Maze game mockups, menu mockups, UML diagram)
 - [Gantt chart](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/docs/gantt_chart.md)
 - [Menu use-case diagram](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/artifacts/use_case_diagrams/menu_use_cases.md)
 - [Maze game use-case diagram](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/artifacts/use_case_diagrams/maze_game_use_cases.md)
 - [Objectives use-case diagram](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/artifacts/use_case_diagrams/maze_game_use_cases.md)
 - [High-level tasks](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/docs/tasks.md)
+- [Midterm update](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/docs/Maze%20Runners%20Midterm%20Update.pdf) (Maze game mockups, menu mockups, UML diagram)
 - [Midterm SRS](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/docs/software_requirements_specification.md)
 - [Final presentation](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/docs/Maze%20Runners%20Final%20Presentation.pdf)
 
