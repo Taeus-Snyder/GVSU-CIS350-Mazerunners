@@ -21,23 +21,22 @@ Classes: player, enemy (abstract) - specific enemy types under this, maze, mazeG
 Weekly meetings, see where everyone is at, ensuring everything is on time and current features working properly. Dividing certain tasks of the project.
  
 # Estimated Timeline
-**# of weeks remaining until Game Release: 6 (as of 10/13/22)**
 - Define characteristics of the game (week 1)
 - Diagrams of menu, maze, and class hierarchy (Thursday, October 14)
-- Menu Demo **(ETA: 2 days Saturday, October 15)**
+- Menu Demo **(ETA: Saturday, October 15)**
 - In-class Status Update and Demonstration **(ETA: 1 week Wednesday, October 19)** 🎉
-- Maze Generation Demo **(ETA: 2 weeks Thursday, October 27)**
-- In-game Displays Demo **(ETA: 2 weeks Thursday, October 27)**
-- Functioning Player Demo **(ETA: 3 weeks Thursday, November 3)**
-- Enemy vs Player Demo **(ETA: 4 weeks Thursday, November 10)**
-- Additional features; hazards; extras **(ETA: 4 weeks Thursday, November 10)**
-- In depth testing and debugging **(ETA: 5 weeks Thursday, November 17)**
-- **GAME RELEASE**: set up on hosting platform and playable **(ETA: 6 weeks Thursday, November 24)** 🎉
-- Final debugging and user testing **(ETA: 7 weeks Thursday, December 1)**
-- Preparations for game presentation **(ETA: 7.5 weeks Tuesday, December 6)**
+- Maze Generation Demo **(ETA: Thursday, October 27)**
+- In-game Displays Demo **(ETA: Thursday, October 27)**
+- Functioning Player Demo **(ETA: Thursday, November 3)**
+- Enemy vs Player Demo **(ETA: Thursday, November 10)**
+- Additional features; hazards; extras **(ETA: Thursday, November 10)**
+- In depth testing and debugging **(ETA: Thursday, November 17)**
+- **GAME RELEASE**: set up on hosting platform and playable **(ETA: Thursday, November 24)** 🎉
+- Final debugging and user testing **(ETA: Thursday, December 1)**
+- Preparations for game presentation **(ETA: Tuesday, December 6)**
   - Slides/ppt?
   - Predetermined format for demonstrating game mechanics
-- Presenting game to class **(ETA: 8 weeks Wednesday, December 7)** 🎉
+- Presenting game to class **(ETA: Wednesday, December 7)** 🎉
 
 # Anticipated Problems
 
