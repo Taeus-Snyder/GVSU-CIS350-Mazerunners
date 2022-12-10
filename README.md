@@ -18,6 +18,6 @@ This is a top-down 2D game created using Java.
 - Oracle JDK version 19.0.1
 
 ## Run Instructions
-1. Download the zip file of the application [here](htps://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/GVSU-CIS350-Mazerunners-Aleeb-edits.zip) and unzip the files OR clone the repository
+1. Download the zip file of the application [here](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/GVSU-CIS350-Mazerunners-Aleeb-edits.zip) and unzip the files OR clone the repository
 2. Open the files in the IDE of your choice or a program that can compile Java. (We used intelliJ IDEA)
 3. Run the file MazeGame.java
