@@ -60,7 +60,7 @@ This contains our final software requirements specifications. The purpose of whi
 | NFR12 | The enemy character shall move when the player chracter moves |
 | NFR13 | The enemy character shall move at the same or lower frame rate as the player character |
 | NFR14 | The enemy shall have a different appearance than the player character |
-| NFR15 | … |
+| NFR15 | The enemy shall not be able to acquire objective objects or power-ups/health packs |
   
   
 # Software Artifacts
