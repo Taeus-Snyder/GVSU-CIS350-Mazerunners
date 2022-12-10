@@ -29,7 +29,7 @@ This contains our final software requirements specifications. The purpose of whi
 | :-------------: | :----------: |
 | FR11 | The enemy character shall attack the player when the enemy character is touching the bounds of the player |
 | FR12 | The enemy character shall remove a health point from the player when it attacks the player |
-| FR13 | The enemy character shall die when attacked by the player character |
+| FR13 | The enemy character shall be removed from the maze when attacked by the player character |
 | FR14 | The enemy character shall respawn after it dies |
 | FR15 | The enemy character shall be able to move throughout the maze paths |
   
