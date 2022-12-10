@@ -67,6 +67,7 @@ This contains our final software requirements specifications. The purpose of whi
 <Describe the purpose of this section>
 * [I am a link](to_some_file.pdf)
   
+- [Project proposal](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/docs/updated-proposal.md)
 - [Menu use-case diagram](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/artifacts/use_case_diagrams/menu_use_cases.md)
 - [Maze game use-case diagram](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/artifacts/use_case_diagrams/maze_game_use_cases.md)
 - [Objectives use-case diagram](https://github.com/Taeus-Snyder/GVSU-CIS350-Mazerunners/blob/master/artifacts/use_case_diagrams/maze_game_use_cases.md)
