@@ -3,6 +3,7 @@
 your SRS>
 # Software Requirements
 <Describe the structure of this section>
+  
 ## Functional Requirements
 
 ### Player Mechanics
